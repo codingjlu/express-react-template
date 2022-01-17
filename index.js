@@ -8,7 +8,14 @@ const public = path.join(__dirname, "client", "dist");
 app.use(express.static(public));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.post("/hello", (req, res) => {
+  res.json({
+    hello: "world"
+  });
+});
+
+// Declare all your routes before this one:
+app.get("*", (req, res) => {
   res.sendFile(path.join(public, "index.html"));
 });
 

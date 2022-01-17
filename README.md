@@ -1,5 +1,6 @@
 # Express React Template
 Just a (personal, although anyone can use it) template for Express and React
+on the same server.
 
 ### Getting started
 Just copy the source:
@@ -35,6 +36,3 @@ And start the server with:
 ```bash
 npm start
 ```
-
-\n\n
-Most of my fullstack React projects use the template.

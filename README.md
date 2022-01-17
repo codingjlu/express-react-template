@@ -1,16 +1,18 @@
 # Express React Template
-Just a (personal, although anyone can use it) template for Express and React
-on the same server.
+A template for Express and React on the same server. [Demo](https://express-react-template.glitch.me).
 
 ### Getting started
 Just copy the source:
 ```bash
 git clone https://github.com/codingjlu/express-react-template.git
 ```
-Then run the following:
+Then run the following commands one by one:
 ```bash
 cd express-react-template
 npm install
+cd client
+npm install
+cd ..
 npm run dev
 ```
 Every time you save a file the server will be restarted (with `nodemon`).

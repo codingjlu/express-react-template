@@ -1,0 +1,38 @@
+{
+  "name": "express-react-template",
+  "version": "1.0.0",
+  "description": "Express and React template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run build --prefix client\" \"nodemon index.js\"",
+    "start": "node index.js",
+    "prod": "npm run prod --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingjlu/express-react-template.git"
+  },
+  "keywords": [
+    "express",
+    "react",
+    "template",
+    "babel",
+    "webpack",
+    "styled-components"
+  ],
+  "author": "codingjlu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingjlu/express-react-template/issues"
+  },
+  "homepage": "https://github.com/codingjlu/express-react-template#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "kleur": "^4.1.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

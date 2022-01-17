@@ -15,6 +15,20 @@ module.exports = {
         exclude: /node_modules/,
         include: path.resolve(__dirname, 'src'),
         use: ["babel-loader"]
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 8192,
+            name: "static/media/[name].[hash].[ext]"
+          }
+        }
+      },
+      {
+        test: /\.svg/,
+        use: ["@svgr/webpack"]
       }
     ]
   },

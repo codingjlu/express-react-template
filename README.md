@@ -6,8 +6,10 @@ Just copy the source:
 ```bash
 git clone https://github.com/codingjlu/express-react-template.git
 ```
-Then run:
+Then run the following:
 ```bash
+cd express-react-template
+npm install
 npm run dev
 ```
 Every time you save a file the server will be restarted (with `nodemon`).

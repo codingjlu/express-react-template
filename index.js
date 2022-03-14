@@ -1,24 +1,19 @@
+require("dotenv").config();
+const dev = process.env.NODE_ENV !== "production";
 const path = require("path");
-const kleur = require("kleur");
-const express = require('express');
+const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
+app.use(express.static(path.join(__dirname, "client", "dist")));
 
-const public = path.join(__dirname, "client", "dist");
-app.use(express.static(public));
-app.use(bodyParser.json());
+if (dev) {
+  const webpackDev = require("./dev");
+  app.use(webpackDev.comp).use(webpackDev.hot);
+}
 
-app.post("/hello", (req, res) => {
-  res.json({
-    hello: "world"
-  });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
-// Declare all your routes before this one:
-app.get("*", (req, res) => {
-  res.sendFile(path.join(public, "index.html"));
-});
-
-app.listen(3000, function() {
-  console.log(kleur.cyan().bold().underline('Server started on http://localhost:3000.'));
+app.listen(3000, function () {
+  console.log("Server started on :3000");
 });

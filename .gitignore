@@ -1,2 +1,25 @@
+# npm data
 node_modules/
+.npm
+
+# ide
+.vscode/
+.intellij/
+
+# dotenv environment variable files
 .env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# build
+client/dist/*

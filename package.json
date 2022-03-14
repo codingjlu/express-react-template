@@ -17,7 +17,7 @@
     "react",
     "template",
     "babel",
-    "webpack",
+    "webpack"
   ],
   "author": "codingjlu",
   "license": "MIT",

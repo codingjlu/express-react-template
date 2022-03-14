@@ -9,32 +9,22 @@ git clone https://github.com/codingjlu/express-react-template.git
 Then run the following commands one by one:
 ```bash
 cd express-react-template
-npm install
-cd client
-npm install
-cd ..
+npm i
+```
+You can start the dev server by running
+```shell
 npm run dev
 ```
-Every time you save a file the server will be restarted (with `nodemon`).
-
-### Editing
-#### Frontend
-The frontend is made with React, React Router, and Styled Components.
-You can edit everything in `/client/src/` where `index.js` is the main file.
-To customize the HTML output file by editing `/client/template.html`.
-
-You can install more packages inside `/client/`.
-
-#### Backend
-The bare bones of an Express server with `body-parser` built-in.
-Edit however you like.
+This will fire up an Express server with live Webpack compilation and HMR.
+Edit away!!
 
 ### Production
-Run the following to build:
-```bash
+The process is pretty simple. First build the project:
+```shell
 npm run build
 ```
-And start the server with:
-```bash
+Then start the server with
+```shell
 npm start
 ```
+That's all there is to it.
